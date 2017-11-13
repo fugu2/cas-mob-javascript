@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>
+		Awesome Photoshop
+	</title>
+	<script src="index.js"></script>
+	<script>
+		function rotateLeft(pixels){
+			//pixels is two dimensional array
+			//TODO:
+			return pixels;
+		}
+		
+		function invert(pixels){
+			//pixels is two dimensional array
+			//TODO:
+			return pixels;
+		}
+	
+	</script>
+</head>
+<body>
+<input type="file" id="fileChooser">
+<input type="button" value="Rotate Left" onclick="manipulateImage(rotateLeft)">
+<input type="button" value="Invert" onclick="manipulateImage(invert)">
+<div style="position:absolute;top:100px">
+	<img id="image"/>
+</div>
+<script>
+	initialize();
+</script>
+</body>
+</html>
