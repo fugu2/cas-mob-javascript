@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Scope</title>
+	<script>
+		let persons = [ 
+			{name : "Patrik", age: 32, hobbies : ["squash", "badminton", "javascript"]}, 
+			{name : "Tobias", age: 30, hobbies : ["chilli farmin", "squash", "javascript", "html/css" ]}, 
+			{name:  "Goofie", age:85, hobbies : ["play bagpipe"]}]
+		
+		function allPersonYoungerThenAndWithHobby(age, hobby){
+			let result = [];
+			for(i = 0; i < persons.length;i++){
+				if(persons[i].age < age && contains(persons[i].hobbies, hobby)){
+					result.push(persons[i].name);
+				}
+			}
+			return result;
+		}
+		
+		function contains(list, item){
+			for(i = 0; i < list.length; i++){
+				if(list[i] == item){
+					return true;
+				}
+			}
+			return false;
+		}
+	</script>
+</head>
+
+	<h1>
+		Result A
+	</h1>
+	<div id="resultA"></div>
+	<h1>Result B</h1>
+	<div id="resultB"></div>
+	<script>
+		document.getElementById("resultA").innerHTML = allPersonYoungerThenAndWithHobby(40, "squash");
+		document.getElementById("resultB").innerHTML = allPersonYoungerThenAndWithHobby(40, "javascript");
+	</script>
+</html>
